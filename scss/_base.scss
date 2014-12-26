@@ -1,0 +1,50 @@
+// =============================
+// Base Styles
+// =============================
+
+body {
+	height:100%;
+	background: $background-color3-gradient--body;
+}
+
+ul {
+	background:black;
+	text-align:center;
+	padding-top:.7em;
+	padding-bottom:.7em;
+	background: -webkit-linear-gradient($background-color1-gradient--nav, $background-color2-gradient--nav, $background-color3-gradient--nav); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient($background-color1-gradient--nav, $background-color2-gradient--nav, $background-color3-gradient--nav); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient($background-color1-gradient--nav, $background-color2-gradient--nav, $background-color3-gradient--nav); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient($background-color1-gradient--nav, $background-color2-gradient--nav, $background-color3-gradient--nav); /* Standard syntax */
+}
+nav li {
+	display:inline;
+	color:$font-color--nav;
+	cursor:pointer;
+	font-size:1.5em;
+	padding: .7em .7em .7em .7em;
+	//for space between margins
+	margin-right:-4px;
+	border-radius:.5em;
+}
+
+nav li:hover {
+	background:$background-color-hover--nav;
+	color:$font-color-hover--nav;
+}
+
+
+/* Id's
+=====================================*/
+#logo {
+	text-align:center;
+	background: -webkit-linear-gradient($background-color1-gradient--body, $background-color2-gradient--body, $background-color3-gradient--body); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient($background-color1-gradient--body, $background-color2-gradient--body, $background-color3-gradient--body); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient($background-color1-gradient--body, $background-color2-gradient--body, $background-color3-gradient--body); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient($background-color1-gradient--body,$background-color3-gradient--body); /* Standard syntax */
+}
+
+
+/* Animations
+=====================================*/
+
