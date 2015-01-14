@@ -80,6 +80,11 @@ nav li {
   margin-right: -4px;
   border-radius: .5em; }
 
+nav a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid red; }
+
 nav li:hover {
   background: #D6D6D6;
   color: black; }
@@ -96,6 +101,13 @@ nav li:hover {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(white, #797779);
   /* Standard syntax */ }
+
+#test {
+  text-align: center;
+  padding: 2em; }
+
+#test img {
+  border-radius: 2em; }
 
 /* Animations
 =====================================*/
