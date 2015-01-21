@@ -76,15 +76,11 @@ nav li {
   font-size: 1.5em;
   padding: .3em .7em .3em .7em;
   margin-right: -4px;
-  border-radius: .5em; }
+  border-radius: .2em; }
 
 nav a {
   text-decoration: none;
   color: white; }
-
-nav li:hover {
-  background: #D6D6D6;
-  color: black; }
 
 /* Id's
 =====================================*/
@@ -122,8 +118,8 @@ nav li:hover {
   position: fixed;
   width: 25px;
   height: 25px;
-  right: 0;
-  top: 0;
+  right: 1em;
+  top: 1em;
   background-image: url(../images/xout.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -149,7 +145,8 @@ nav li:hover {
   left: 0px;
   background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
-  display: none; }
+  display: none;
+  cursor: pointer; }
   #popupBackground img {
     position: absolute;
     max-width: 100%;
@@ -160,7 +157,8 @@ nav li:hover {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    cursor: auto; }
 
 #logo {
   text-align: center;
@@ -170,7 +168,7 @@ nav li:hover {
   /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(white, white, #797779);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(white, #797779);
+  background: linear-gradient(white, white, #797779);
   /* Standard syntax */ }
   #logo img {
     width: 650px; }
@@ -244,11 +242,22 @@ nav li:hover {
   background-color: black;
   padding: 4em;
   border: 2px solid #98209B; }
-  #imgScrollWrapper img {
-    max-width: 500px; }
 
 /* Classes
 =====================================*/
+.socialMediaLogo {
+  position: absolute;
+  right: 2em;
+  top: 1em; }
+  .socialMediaLogo img {
+    height: 35px;
+    width: 35px;
+    display: inline;
+    padding-left: 1em; }
+  .socialMediaLogo a {
+    font-size: 0;
+    margin-left: 15px; }
+
 .rotatingImages {
   display: none; }
 
@@ -261,6 +270,10 @@ nav li:hover {
 
 .menuButton {
   display: none; }
+
+.hover:hover {
+  background: #D6D6D6;
+  color: black; }
 
 /* Media Queries
 =====================================*/
@@ -286,5 +299,8 @@ nav li:hover {
       height: auto;
       padding: 2em;
       background: black; } }
+@media (max-width: 500px) {
+  .socialMediaLogo {
+    display: none; } }
 
 /*# sourceMappingURL=application.css.map */

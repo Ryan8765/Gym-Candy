@@ -19,7 +19,7 @@ nav li {
 	padding: .3em .7em .3em .7em;
 	//for space between margins
 	margin-right:-4px;
-	border-radius:.5em;
+	border-radius:.2em;
 }
 
 nav a  {
@@ -27,11 +27,6 @@ nav a  {
 	color:$font-color--nav;
 }
 
-
-nav li:hover {
-	background:$background-color-hover--nav;
-	color:$font-color-hover--nav;
-}
 
 
 /* Id's
@@ -72,8 +67,8 @@ nav li:hover {
 	position:fixed;
 	width:25px;
 	height:25px;
-	right:0;
-	top:0;
+	right:1em;
+	top:1em;
 	background-image:url(../images/xout.png);
 	background-repeat:no-repeat;
 	background-position:center;
@@ -103,6 +98,7 @@ nav li:hover {
 	background-color:rgba(0, 0, 0, 0.8);
 	text-align: center;
 	display:none;
+	cursor:pointer;
 
 	img {
 		position:absolute;
@@ -116,6 +112,7 @@ nav li:hover {
 		-ms-transform: translate(-50%, -50%);
 		-o-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
+		cursor:auto;
 	}
 }
 
@@ -124,7 +121,7 @@ nav li:hover {
 	background: -webkit-linear-gradient($background-color1-gradient--body, $background-color2-gradient--body, $background-color3-gradient--body); /* For Safari 5.1 to 6.0 */
   	background: -o-linear-gradient($background-color1-gradient--body, $background-color2-gradient--body, $background-color3-gradient--body); /* For Opera 11.1 to 12.0 */
   	background: -moz-linear-gradient($background-color1-gradient--body, $background-color2-gradient--body, $background-color3-gradient--body); /* For Firefox 3.6 to 15 */
-  	background: linear-gradient($background-color1-gradient--body,$background-color3-gradient--body); /* Standard syntax */
+  	background: linear-gradient($background-color1-gradient--body,$background-color1-gradient--body, $background-color3-gradient--body); /* Standard syntax */
 
   	img {
   		width: 650px;
@@ -218,14 +215,27 @@ nav li:hover {
 	background-color:black;
 	padding:$margin-size--rotatingImage;
 	border: 2px solid #98209B;
-
-	img {
-		max-width:500px;
-	}
 }
 
 /* Classes
 =====================================*/
+.socialMediaLogo {
+	position:absolute;
+	right:2em;
+	top:1em;
+	img {
+		height:35px;
+		width:35px;
+		display:inline;
+		padding-left:1em;
+	}
+
+	a {
+		font-size:0;
+		margin-left:15px;
+	}
+}
+
 .rotatingImages {
 	display:none;
 }
@@ -242,6 +252,11 @@ nav li:hover {
 
 .menuButton {
 	display:none;
+}
+
+.hover:hover {
+	background:$background-color-hover--nav;
+	color:$font-color-hover--nav;
 }
 
 
@@ -278,3 +293,10 @@ nav li:hover {
 		}
 	}
 }
+
+@media (max-width:500px) {
+	.socialMediaLogo {
+		display:none;
+	}
+}
+

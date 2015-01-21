@@ -59,28 +59,35 @@ $(document).ready(function() {
 	instagramAjax();
 	//popup box event on picture click and also video popup in new window
 	//dynamically created nodes preventDefault
+	//var counter to count number of times user has clicked a link
+	var counter = 0;
 	$('#imageContainerInner').on('click', 'a', function(event){
 		event.preventDefault();
 		var popupBackground = $('<div id="popupBackground"><div id="rightArrow"></div><div id="leftArrow"></div><div id="xout"></div></div>');
 		//index of picture clicked
 		var imgNumber = $(this).index();
-		//image node
+		//image node first link click
 		var imgToPopup = $("<img id='popupImage' src='" + urlImagesArray[imgNumber] + "'>");
 
 		//if image clicked isn't a video then
 		if (urlImagesArray[imgNumber] != undefined) {
-			//append image node
-			popupBackground.append(imgToPopup);
-			//append popupBackground to body element
-			$('body').append(popupBackground);
-			$('#popupBackground').show();
+			if(counter < 1) {
+				//append image node
+				popupBackground.append(imgToPopup);
+				//append popupBackground to body element
+				$('body').append(popupBackground);
+				$('#popupBackground').show();
+			} else {
+				$('#popupImage').attr('src', urlImagesArray[imgNumber]);
+				$('#popupBackground').show();
+			}//end if
 		//else load video in new page
 		} else {
 			window.open(urlVideosArray[imgNumber]);
 		}
-	}); //end onclick
 
-	/***********trying to figure out how to reference dynamically created content******************/
+		counter++;
+	}); //end onclick
 
 	//create function to handle right clicks on popup gallery
 	var pictureRight = function() {
@@ -153,28 +160,5 @@ $(document).ready(function() {
 	$('body').on('click', '#rightArrow, #leftArrow, #popupImage', function(event){
 		event.stopPropagation();
 	});
-
-	//mousestops create a settime to get rid of xout rightarrow and left arrow
-	var counter = 0;
-	$('body').on('mousemove click', '#popupBackground, #popupImage #rightArrow #leftArrow', function() {
-		var width = window.innerWidth;
-		//clear previous timer
-		clearTimeout(timer);
-		//stop repetitive "show" statements...only execute if it's not being shown.
-		if($('#rightArrow').css('display') == "none") {
-			$('#rightArrow, #leftArrow, #xout').show();
-		}
-
-		//allow arrows to disappear on smaller devices for better viewing area
-		if(width < 650) {
-			counter++;
-			//restart timer;
-			var timer = setTimeout(function(){
-				console.log('hello');
-				$('#rightArrow, #leftArrow').hide();	
-			}, 4000);
-		}
-	});
-
 //----------------------------------	
 });

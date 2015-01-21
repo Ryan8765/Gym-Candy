@@ -48,29 +48,41 @@ $(document).ready(function() {
 	//call image rotator
 	rotatingImageGallery();
 
-
 	//adjust #imgScrollWrapper height and width in rotating gallery and also adjust #background height to length of document for its background image
 	var imageDivResize = function() {
 		var w = window.innerWidth;
 		var h = $(document).height();
 		var image = $('.rotatingImages');
-		var imageWidth = image.outerWidth();
-		var imageHeight = image.outerHeight();
+		var imageHeight;
+		var imageWidth;
+		
 		var div = $('#imgScrollWrapper');
+		//change height of scroll wrapper for all widths
+		
 		//if screen width 
 		if (w >= 768) {
+			imageHeight = image.outerHeight();
+			imageWidth = imageHeight/1.5;
 			div.css('width',imageWidth);
+			div.css('height', imageHeight);
+			console.log(imageHeight);
+			console.log(imageWidth);
+		} else {
+			imageWidth = image.outerWidth();
+			imageHeight = imageWidth * 1.5;
+			div.css('width',imageWidth);
+			div.css('height', imageHeight);
+			console.log(imageHeight);
+			console.log(imageWidth);
 		}
-
-		//change height of scroll rapper for all widths
-		div.css('height', imageHeight);
 	}
 
 	$(window).resize(function(){
-		imageDivResize();
+		imageDivResize();	
 	});
 
 	imageDivResize();
+
 	
 
 //----------------------------------	
