@@ -57,51 +57,21 @@ $(document).ready(function() {
 		var imageWidth = image.outerWidth();
 		var imageHeight = image.outerHeight();
 		var div = $('#imgScrollWrapper');
-		var nav = $('nav');
-		//nav height
-		var navHeight = nav.outerHeight(true);
-		//distance from bottom of nav to top of page
-		var navDistance = nav.offset().top;
-		//nav height plus distance to top subtracted from window height is height for #background div
-		var backgroundHeight = h - (navHeight + navDistance);
-		//set #background height
-		$('#background').css('height',backgroundHeight);
-
-
+		//if screen width 
 		if (w >= 768) {
 			div.css('width',imageWidth);
-		} else {
-			div.css('width','90%');
 		}
 
 		//change height of scroll rapper for all widths
 		div.css('height', imageHeight);
 	}
 
-	/*******
-	setInterval(function() {
-		$('#rotatingImages').on('load', function(){
-			alert('hello');
-		});
-		console.log('hello');
-	},3000);
-	******/
-	/******
-	var readyStateCheckInterval = setInterval(function() {
-	    if (document.readyState === "complete") {
-	    	imageDivResize();
-	        clearInterval(readyStateCheckInterval);
-	    }
-	}, 100);
-	********/
-	//take care of window resizes for responsive website
 	$(window).resize(function(){
-		imageDivResize();
 		imageDivResize();
 	});
 
 	imageDivResize();
-	imageDivResize();
+	
 
 //----------------------------------	
 });
