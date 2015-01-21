@@ -4,8 +4,9 @@
 	<meta charset="UTF-8"/>
 	<title>Gym Candy</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src = "app.js"></script>
 	<link rel="stylesheet" href="css/application.css" type="text/css">
+	<script src = "appHomepage.js">
+	</script>
 </head>
 <body>
 	<div id="logo">
@@ -13,26 +14,38 @@
 	</div>
 	<nav>
 		<ul>
+			<li class="menuButton">- Menu -</li>
 			<a href="index.html">
-				<li>
+				<li class="menu" >
 					Home
 				</li>
 			</a>
-			<li>YouTube</li>
 			<a href="instagram.html">
-				<li>
+				<li class="menu" >
 					Instagram
 				</li>
 			</a>	
-			<li>Blog</li>
-			<li>Nutrition</li>
-			<li>About Me</li>
-			<li>Contact</li>
+			<li class="menu">Clients</li>
+			<li class="menu">Nutrition</li>
+			<li class="menu">About Me</li>
+			<li class="menu">Contact</li>
 		</ul>
 	</nav>
-
-	<div id="test">
-		<img src="images/bikinipose2.jpg" alt="Bicep" width="40%">
-	</div>
+		<div id="background">
+			<div id="rotatingWrapper">
+				<div id="imgScrollWrapper">
+						<img class="rotatingImages" src="images/competition.jpg" alt="Bicep" >
+						<img class="rotatingImages" src="images/bikinimodelface5.jpg" alt="Bicep" >
+						<img class="rotatingImages" src="images/competition2.jpg" alt="Bicep" >
+						<img class="rotatingImages" src="images/competition4.jpg" alt="Bicep" >
+						<img class="rotatingImages" src="images/bikinimodelface6.jpg" alt="Bicep" >
+						<img class="rotatingImages" src="images/competition6.jpg" alt="Bicep" >
+						<img class="rotatingImages" src="images/competition7.jpg" alt="Bicep" >
+						<img class="rotatingImages" src="images/competition3.jpg" alt="Bicep" >
+				</div>
+			</div>
+		</div>
+	<script src = "appGlobal.js">
+	</script>
 </body>
 </html>

@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8"/>
-	<title>GC Instagram</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src = "app.js"></script>
-	<link rel="stylesheet" href="css/application.css" type="text/css">
-</head>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>GC Instagram</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src = "app.js"></script>
+		<script src = "appGlobal.js"></script>
+		<link rel="stylesheet" href="css/application.css" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	</head>
 
-<body>
-	<div id="logo">
-		<img src="images/croppedLogo.png" alt="Gym Candy Logo">
-	</div>
-	<nav>
-		<ul>
-			<a href="index.html">
-				<li>
-					Home
-				</li>
-			</a>
-			<li>YouTube</li>
-			<a href="instagram.html">
-				<li>
-					Instagram
-				</li>
-			</a>	
-			<li>Blog</li>
-			<li>Nutrition</li>
-			<li>About Me</li>
-			<li>Contact</li>
-		</ul>
-	</nav>
-</body>
+	<body>
+		<div id="background2">
+			<div id="logo">
+				<img src="images/croppedLogo.png" alt="Gym Candy Logo">
+			</div>
+			<nav>
+				<ul>
+					<li class="menuButton">- Menu -</li>
+					<a href="index.html">
+						<li class="menu">
+							Home
+						</li>
+					</a>
+					<a href="instagram.html">
+						<li class="menu">
+							Instagram
+						</li>
+					</a>	
+					<li class="menu">Clients</li>
+					<li class="menu">Nutrition</li>
+					<li class="menu">About Me</li>
+					<li class="menu">Contact</li>
+				</ul>
+			</nav>
+
+			<div id="imageContainer">
+				<p>Latest Instagram Posts</p>
+				<div id="imageContainerInner">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
