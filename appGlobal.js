@@ -37,12 +37,12 @@ $(document).ready(function() {
 	var responsiveNav = function () {
 		var w = window.innerWidth;
 		if(w > 768 ) {
-			$('.menu').show()
+			$('.menu').show();
 			$('nav li').css('display','inline');
 			$('.menuButton').hide();
 		} else {
 			$('.menuButton').show();
-			$('nav li').css('display','list-item')
+			$('nav li').css('display','list-item');
 			$('.menu').hide();
 		}//end if
 	};//end responsiveNav function 

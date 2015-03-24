@@ -75,7 +75,7 @@ $(document).ready(function() {
 			console.log(imageHeight);
 			console.log(imageWidth);
 		}
-	}
+	};
 
 	$(window).resize(function(){
 		imageDivResize();	

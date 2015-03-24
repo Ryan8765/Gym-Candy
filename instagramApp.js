@@ -10,10 +10,11 @@ $(document).ready(function() {
 
 	function instagramAjax () {
 		$.ajax ({
+			type:'get',
 			url: "https://api.instagram.com/v1/users/432935321/media/recent/?client_id=f32e7af0d6d941009db0a4406adb4e88",
 			dataType: "jsonp",
 			success: function(returnedData) {
-				console.log(returnedData);
+				// console.log(returnedData);
 				//media object
 				var x = returnedData.data;
 				//length of media objects returned from ajax request
@@ -52,11 +53,15 @@ $(document).ready(function() {
 						$("#imageContainerInner").append(html);
 					}
 				} //end loop
-			}//end success
+			},//end success
+			error: function(jqXHR, textStatus, errorThrown) {
+				console.log("Error loading Instagram: " + errorThrown);
+			}
 		});//end ajax request
 	}//end instagramAjax function
 
 	instagramAjax();
+
 	//popup box event on picture click and also video popup in new window
 	//dynamically created nodes preventDefault
 	//var counter to count number of times user has clicked a link
@@ -77,16 +82,15 @@ $(document).ready(function() {
 				//append popupBackground to body element
 				$('body').append(popupBackground);
 				$('#popupBackground').show();
+				counter++;
 			} else {
 				$('#popupImage').attr('src', urlImagesArray[imgNumber]);
 				$('#popupBackground').show();
 			}//end if
-		//else load video in new page
+		//else load video in new window
 		} else {
 			window.open(urlVideosArray[imgNumber]);
 		}
-
-		counter++;
 	}); //end onclick
 
 	//create function to handle right clicks on popup gallery
